@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import { Todo } from "./components/Todo";
 import { TodoForm } from "./components/TodoForm";
-import { TodoType } from './types'
+import { TodoType } from "./types";
 import { toggleOneTodo } from "./utils/toggleOneTodo";
+import { QueryForm } from "./components/queryForm";
 
 function App() {
   const [todos, setTodos] = useState<TodoType[]>([
@@ -50,6 +51,7 @@ function App() {
           />
         ))}
         <TodoForm addTodo={addTodo} />
+        <QueryForm />
       </div>
     </div>
   );

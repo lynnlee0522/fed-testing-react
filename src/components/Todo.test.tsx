@@ -19,6 +19,7 @@ describe("Todo component", () => {
     );
     expect(screen.getByText("Hello World")).toBeInTheDocument();
   });
+
   test("should render isCompleted item", () => {
     const todo = {
       id: 1,
@@ -35,6 +36,7 @@ describe("Todo component", () => {
     );
     expect(screen.getByText("Redo")).toBeInTheDocument();
   });
+
   test("should toggle item", () => {
     const todo = {
       id: 1,
@@ -53,6 +55,7 @@ describe("Todo component", () => {
     userEvent.click(screen.getByText("Redo"));
     expect(toggleTodo).toHaveBeenCalledTimes(1);
   });
+
   test("should toggle item when todo not completed", () => {
     const todo = {
       id: 1,
@@ -71,6 +74,7 @@ describe("Todo component", () => {
     userEvent.click(screen.getByText("Complete"));
     expect(toggleTodo).toHaveBeenCalledTimes(1);
   });
+  
   test("should delete item", () => {
     const todo = {
       id: 1,
